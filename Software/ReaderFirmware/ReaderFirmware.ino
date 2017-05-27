@@ -16,7 +16,6 @@
 #define RS232_SPEED 115200
 
 MFRC522 rfid(SS_PIN, RST_PIN);
-MFRC522::MIFARE_Key key;
 
 void setup() {
 	// Initialize serial and wait for it
@@ -28,11 +27,6 @@ void setup() {
 
 	// Init MFRC-522
 	rfid.PCD_Init();
-
-	// Create default key
-	for (byte i = 0; i < 6; i++) {
-		key.keyByte[i] = 0xFF;
-	}
 
 #ifdef BUZZER_PIN
 	// Play startup tones
@@ -46,9 +40,6 @@ void setup() {
 
 	// Print header
 	Serial.print(F("Version: 1.0.0 Altairis Serial RFID Reader Firmware for Arduino\r\n"));
-	Serial.print(F("Key: "));
-	printHex(key.keyByte, MFRC522::MF_KEY_SIZE);
-	Serial.print("\r\n");
 }
 
 void loop() {
