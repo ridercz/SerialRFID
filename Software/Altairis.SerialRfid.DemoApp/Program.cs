@@ -16,7 +16,6 @@ namespace Altairis.SerialRfid.DemoApp {
                     reader.Open();
                     Console.WriteLine("OK");
                     Console.WriteLine($"  {reader.Signature} version {reader.Version}");
-                    Console.WriteLine($"  Key: {reader.Key}");
 
                     while (true) {
                         Console.Write("Waiting for card...");
@@ -28,13 +27,19 @@ namespace Altairis.SerialRfid.DemoApp {
                 }
 
             }
+            catch (RfidException ex) {
+                Console.WriteLine("Unexpected response!");
+                Console.WriteLine(ex.Message);
+                if (!string.IsNullOrEmpty(ex.DataReceived)) {
+                    Console.WriteLine("Received data:");
+                    Console.WriteLine(ex.DataReceived);
+                }
+            }
             catch (Exception ex) {
                 Console.WriteLine("Failed!");
                 Console.WriteLine(ex.Message);
             }
 
-
         }
-
     }
 }
