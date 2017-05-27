@@ -12,7 +12,6 @@ namespace Altairis.SerialRfid.Client {
     /// <seealso cref="System.IDisposable" />
     public class RfidReader :IDisposable {
         private const int PORT_SPEED = 115200;
-        private const string DEBUG_STRING = "VMDPV";
         private SerialPort _port;
 
         /// <summary>
