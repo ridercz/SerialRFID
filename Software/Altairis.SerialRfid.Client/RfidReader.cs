@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.IO.Ports;
 
 namespace Altairis.SerialRfid.Client {
-    public class RfidReader {
+    public class RfidReader :IDisposable {
         private const int PORT_SPEED = 115200;
         private SerialPort _port;
 
@@ -68,6 +68,18 @@ namespace Altairis.SerialRfid.Client {
 
         public void Close() {
             if (this._port.IsOpen) this._port.Close();
+        }
+
+        public void Dispose() {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+
+        protected virtual void Dispose(bool disposing) {
+            if (disposing) {
+                this._port?.Dispose();
+                this._port = null;
+            }
         }
 
     }
