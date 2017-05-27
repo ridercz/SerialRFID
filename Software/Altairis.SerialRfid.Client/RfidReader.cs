@@ -17,7 +17,8 @@ namespace Altairis.SerialRfid.Client {
             var availablePorts = SerialPort.GetPortNames();
             if (!availablePorts.Contains(portName, StringComparer.OrdinalIgnoreCase)) throw new ArgumentOutOfRangeException(nameof(portName), "Port not available. Available ports: " + string.Join(", ", availablePorts));
 
-            this._port = new SerialPort(portName, PORT_SPEED);
+            this._port = new SerialPort(portName, PORT_SPEED, Parity.None, 8, StopBits.One);
+            this._port.DtrEnable = true;
             this._port.NewLine = "\r\n";
         }
 
@@ -59,7 +60,7 @@ namespace Altairis.SerialRfid.Client {
 
                     return new RfidCard {
                         Uid = cardData[1],
-                        Type = cardData[1]
+                        Type = cardData[2]
                     };
                 }
                 catch (RfidException) when (!throwOnError) { }
