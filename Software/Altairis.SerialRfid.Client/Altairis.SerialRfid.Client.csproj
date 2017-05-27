@@ -41,8 +41,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Reader.cs" />
-    <Compile Include="ReaderMessage.cs" />
+    <Compile Include="RfidReader.cs" />
+    <Compile Include="RfidReaderVerb.cs" />
+    <Compile Include="RfidCard.cs" />
+    <Compile Include="RfidException.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
