@@ -1,8 +1,10 @@
-# SerialRFID Project
+Ôªø# SerialRFID Project
 
 This project defines hardware and software for interfacing MFRC522 (RC522)-based RFID readers with .NET applications trough virtual serial port.
 
-It contains the following main components
+[[https://github.com/ridercz/SerialRFID/wiki/Images/CasePic-0003.jpg]]
+
+The project contains the following main components
 
 * *Hardware*, the reader itself, Arduino Nano microcontroller and a beeper.
 * *Firmware* for the microcontroller.
@@ -13,7 +15,7 @@ See [wiki](https://github.com/ridercz/SerialRFID/wiki) for documentation.
 
 ## Author
 
-This project is developed by *Michal Altair Val·öek*.
+This project is developed by *Michal Altair Val√°≈°ek*.
 * [Personal homepage](https://www.rider.cz/)
 * [Company page](https://www.altairis.cz)
 * [Facebook](https://www.facebook.com/rider.cz)
@@ -21,5 +23,5 @@ This project is developed by *Michal Altair Val·öek*.
 * [Microsoft MVP](https://mvp.microsoft.com/en-us/PublicProfile/9610), Visual Studio and Development Technologies
 
 ## License
-Copyright (c) Michal A. Val·öek - Altairis, 2017
+Copyright (c) Michal A. Val√°≈°ek - Altairis, 2017
 Licensed under terms of the [MIT License](LICENSE).
