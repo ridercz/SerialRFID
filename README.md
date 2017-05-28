@@ -1,8 +1,8 @@
 ﻿# SerialRFID Project
 
-This project defines hardware and software for interfacing MFRC522 (RC522)-based RFID readers with .NET applications trough virtual serial port.
+This project designs hardware and software for interfacing MFRC522 (RC522)-based RFID readers with .NET applications trough virtual serial port.
 
-[[https://github.com/ridercz/SerialRFID/wiki/Images/CasePic-0003.jpg]]
+![Finished project hardware](https://github.com/ridercz/SerialRFID/wiki/Images/CasePic-0003.jpg)
 
 The project contains the following main components
 
