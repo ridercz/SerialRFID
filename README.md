@@ -25,3 +25,9 @@ This project is developed by *Michal Altair Valášek*.
 ## License
 Copyright (c) Michal A. Valášek - Altairis, 2017
 Licensed under terms of the [MIT License](LICENSE).
+
+## Contributor Code of Conduct
+
+This project adheres to No Code of Conduct. We are all adults. We accept anyone's contributions. Nothing else matters.
+
+For more information please visit the [No Code of Conduct](https://github.com/domgetter/NCoC) homepage.
